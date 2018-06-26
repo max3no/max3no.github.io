@@ -1,0 +1,82 @@
+body{
+    height:100%;
+    width:100%;
+    margin:0;
+}
+
+#container{
+    position: relative;
+    height:400px;
+    width:90%;
+    border: 2px solid aliceblue;
+    background:url(background.gif);
+    margin-left: 4%;
+    overflow: hidden;
+}
+
+#ufo{
+    position: absolute;
+    background:url(ufo.png);
+    height:10%;
+    width:7%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    top:20%;
+    left:15%; 
+    animation: ufo-blink steps(28) 1s infinite both;
+}
+
+@keyframes ufo-blink {
+    0% { transform: translate(1px, 1px) rotate(0deg); opacity: 1;}
+    10% { transform: translate(-1px, -2px) rotate(-1deg); opacity: 0.8;}
+    20% { transform: translate(-3px, 0px) rotate(1deg); opacity: 0.7;}
+    30% { transform: translate(3px, 2px) rotate(0deg); opacity: 0.5;}
+    40% { transform: translate(1px, -1px) rotate(1deg); opacity: 0.3;}
+    50% { transform: translate(-1px, 2px) rotate(-1deg); opacity: 0.3;}
+    60% { transform: translate(-3px, 1px) rotate(0deg); opacity: 0.5;}
+    70% { transform: translate(3px, 1px) rotate(-1deg); opacity: 0.7;}
+    80% { transform: translate(-1px, -1px) rotate(1deg); opacity: 0.8;}
+    90% { transform: translate(1px, 2px) rotate(0deg); opacity: 0.9;}
+    100% { transform: translate(1px, -2px) rotate(-1deg); opacity: 1;}
+}
+
+.pole{
+
+    position: absolute;
+    height:130px;
+    width:100px;
+    background-color: brown;
+    right:-50px;
+}
+
+#pole_1{
+    top:0;
+}
+
+#pole_2{
+    bottom:0;
+}
+
+#score_div{
+    text-align: center;
+    font-size:40px;
+}
+
+#restart_btn{
+    position: absolute;
+    top:0;
+    /* width:100%; */
+    padding:20px;
+    background-color:brown;
+    color:white;
+    font-size: 35px;
+    border:none;
+    cursor:pointer;
+    display: none;
+}
+
+.stop_animation {
+    animation-play-state: paused !important;
+    opacity: 1 !important;
+}
+
